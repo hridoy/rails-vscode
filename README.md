@@ -2,7 +2,7 @@
 **Now updated for latest rails version**
 
 This extension for Visual Studio Code adds snippets for Ruby on rails. More
-Snippets will be becoming soon just release.
+Snippets will be becoming soon.
 ## Upcoming:
 - Handle Bar Template
 - HAML Template
@@ -14,16 +14,13 @@ Snippets will be becoming soon just release.
 - Mocha Rails
 - Chai Rails
 
-
-
 ![Use Extension](https://github.com/hridoy/media/raw/master/rails-preview.gif)
-
 
 See the [CHANGELOG](https://github.com/hridoy/rails-vscode/master/CHANGELOG.md)
 for the latest changes
 
 # Usage
-Type the helper name just replace **"_"** with **"-"**
+Type the helper name and replace **"_"** with **"-"**
 
 For Example: 
   - has-many
@@ -104,13 +101,13 @@ For Example:
 | `t.boolean`      | Boolean       |
 | `t.time`         | Time          |
 | `t.timestamp`    | Timestamp     |
-| `t.timestamls`   | Timestamps    |
+| `t.timestamps`   | Timestamps    |
 | `t.date`         | Date          |
 | `t.datetime`     | Datetime      |
 | `t.decimal`      | Decimal       |
 | `t.float`        | Float         |
 | `t.integer`      | Integer       |
-| `t.ineger-locak` | Integer Lock  |
+| `t.integer-lock` | Integer Lock  |
 | `t.references`   | References    |
 | `t.rename`       | String        |
 | `t.text`         | Text          |
@@ -135,8 +132,8 @@ For Example:
 *  else
 *  else-if 
 *  end  
-*  emded 
-*  emded-print 
+*  emded (%< %>)
+*  emded-print (<%= %>)
 *  collection-select 
 *  stylesheet-link-tag 
 *  submit-tag 
@@ -194,6 +191,8 @@ For Example:
 * format
 
 # Use the Snippets
+
+Start typing the name of the helper you want (ex: "emb" for "embed") and hit Tab to insert the snippet.
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to
 activate snippets from within the editor.
