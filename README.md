@@ -1,5 +1,5 @@
 # Rails Snippets
-**Now updated for latest rails version**
+**Fork hridoy/rails-vscode and fixed file name error**
 
 This extension for Visual Studio Code adds snippets for Ruby on rails. More
 Snippets will be becoming soon.
