@@ -1,0 +1,122 @@
+{
+	"validate": {
+		"prefix": "validate",
+		"body": "validates ${:attribute}",
+		"description": "validates"
+	},
+	"validates": {
+		"prefix": "validates",
+		"body": "validates :${1:attribute}${2:, presence: true}${3:, uniqueness: { case_sensitive: false \\}}${4:, length: {maximum: 50\\}}${5:, format: { with: ConstantData::VALID_EMAIL_REGEX \\}}${6:, if: :method_name?}\r\n\r\n",
+		"description": "Ruby validates"
+	},
+	"validates-acceptance-of": {
+		"prefix": "validated-acceptance-of",
+		"body": "validates_acceptance_of :${1:terms}${2:${3:, accept: \"${4:1}\"}${5:, message: \"${6:You must accept the terms of service}\"}}",
+		"description": "validates_acceptance_of"
+    },
+    "validates-acceptance-of-if": {
+		"prefix": "validated-acceptance-of-if",
+		"body": "validates_acceptance_of :${1:terms}${2:${3:, accept: \"${4:1}\"}${5:, message: \"${6:You must accept the terms of service}\"}}, if: proc { |obj| ${7:obj.condition?} }}",
+		"description": "validates_acceptance_of if"
+	},
+	"validates-associated": {
+		"prefix": "validated-associated",
+		"body": "validates_associated :${1:attribute}${2:, on: :${3:create}}",
+		"description": "validates_associated"
+	},
+	"validates-associated-if": {
+		"prefix": "validated-associated-if",
+		"body": "validates_associated :${1:attribute}${2:, on: :${3:create}, if: proc { |obj| ${5:obj.condition?} }}",
+		"description": "validates_associated if"
+	},
+	"validates-confirmation-of": {
+		"prefix": "validated-exclusion-of",
+		"body": "validates_confirmation_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:should match confirmation}\"}",
+		"description": "validates_confirmation_of"
+	},
+	"validates-confirmation-of-if": {
+		"prefix": "validated-confirmation-of",
+		"body": "validates_confirmation_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:should match confirmation}\", if: proc { |obj| ${5:obj.condition?} }}",
+		"description": "validates_confirmation_of if"
+	},
+	"validates-exclusion-of": {
+		"prefix": "validated-exclusion-of",
+		"body": "validates_exclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: \"${6:extension %s is not allowed}\"}",
+		"description": "validates_exclusion_of"
+	},
+	"validates-exclusion-of-if": {
+		"prefix": "validated-exclusion-of-if",
+		"body": "validates_exclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: \"${6:extension %s is not allowed}\"}, if: proc { |obj| ${7:obj.condition?} }}",
+		"description": "validates_exclusion_of if"
+    },
+    "validates-format-of": {
+		"prefix": "validated format of",
+		"body": "validates_format_of :${1:attribute}, with: /${2:^[${3:\\w\\d}]+$}/${4:, on: :${5:create}, message: \"${6:is invalid}\"}",
+		"description": "validates_format_of"
+	},
+	"validates-format-of-if": {
+		"prefix": "validated-format-of-if",
+		"body": "validates_format_of :${1:attribute}, with: /${2:^[${3:\\w\\d}]+$}/${4:, on: :${5:create}, message: \"${6:is invalid}\"}, if: proc { |obj| ${7:obj.condition?} }}",
+		"description": "validates_format_of if"
+    },
+    "validates-inclusion-of": {
+		"prefix": "validated-inclusion-of",
+		"body": "validates_inclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: \"${6:extension %s is not included in the list}\"}",
+		"description": "validates_inclusion_of"
+	},
+	"validates-inclusion-of-if": {
+		"prefix": "validated-inclusion-of-if",
+		"body": "validates_inclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: \"${6:extension %s is not included in the list}\"}, if: proc { |obj| ${7:obj.condition?} }}",
+		"description": "validates_inclusion_of if"
+	},
+	"validates-length-of": {
+		"prefix": "validated-length-of ",
+		"body": "validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, message: \"${5:must be present}\"}",
+		"description": "validates_length_of"
+	},
+	"validates-length-of-if": {
+		"prefix": "validated-length-of-if",
+		"body": "validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, message: \"${5:must be present}\"}, if: proc { |obj| ${6:obj.condition?} }}",
+		"description": "validates_length_of if"
+	},
+	"validates-length-of-is": {
+		"prefix": "validated-length-of-is",
+		"body": "validates_length_of :is",
+		"description": "validates_length_of if"
+	},
+	"validates-length-of-minimum": {
+		"prefix": "validated-length-of-minimum",
+		"body": "validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, ",
+		"description": "validates_length_of if"
+	},
+	"validated-numericality-if": {
+		"prefix": "validated-numericality",
+		"body": "validates_numericality_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:is not a number}\"}, if: proc { |obj| ${5:obj.condition?} }}",
+		"description": "validates_numericality_of if"
+	},
+	"validated-numericality-of": {
+		"prefix": "validated-numericality-of",
+		"body": "validates_numericality_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:is not a number}\"}",
+		"description": "validates_numericality_of"
+	},
+	"validated-presence-of": {
+		"prefix": "validated-presence-of",
+		"body": "validates_presence_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:can't be blank}\"}",
+		"description": "validates_presence_of"
+	},
+	"validated-presence-of-if": {
+		"prefix": "validated-presence-of-if",
+		"body": "validates_presence_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:can't be blank}\"}, if: proc { |obj| ${5:obj.condition?} }}",
+		"description": "validates_presence_of if"
+	},
+	"validated-uniqueness-of": {
+		"prefix": "validated-uniqueness-of",
+		"body": "validates_uniqueness_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:must be unique}\"}",
+		"description": "validates_uniqueness_of"
+	},
+	"validated-uniqueness-of-if": {
+		"prefix": "validated-uniqueness-of-if",
+		"body": "validates_uniqueness_of :${1:attribute}${2:, on: :${3:create}, message: \"${4:must be unique}\", if: proc { |obj| ${6:obj.condition?} }}",
+		"description": "validates_uniqueness_of if"
+	}
+}

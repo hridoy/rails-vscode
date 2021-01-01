@@ -1,0 +1,103 @@
+{
+    "form-for": {
+		"prefix": "form-for",
+		"body": "<%= form_for ${1:@object} do |${2:f}| %>\r\n\t<%= render 'layouts/error_messages', f: f.object %>\r\n\t\t\r\n\t<!-- form_for @object, html: { multipart: true }, do |f| -->\r\n\t<!-- form_for @object, html: { class: \"classname\" }, do |f| -->\r\n\r\n\t$3\r\n<% end %>\r\n  ",
+		"description": "form_for"
+    },
+    "form-for-with-error": {
+        "prefix": "form-for-with-errors",
+        "body": "error_messages_for :${1:model}\r\n\r\nform_for @${2:$1} do |f|\r\n  $0\r\n",
+        "description": "form_for with errors"
+    },
+    "form-for-label": {
+        "prefix": "form-for-label",
+        "body": "f.label :${1:attribute}${2:, \"${3:${1/[[:alpha:]]+|(_)/(?1: :\\u$0)/g}}\"}",
+        "description": "form_for label"
+    }, 
+    "form-for-radio-box": {
+        "prefix": "form-for-radio-box",
+        "body": "f.radio_box :${1:attribute}, :${2:tag_value}",
+        "description": "form_for radio_box"
+    },
+    "form-for-hidden-field": {
+        "prefix": "form-for-hidden-field",
+        "body": "f.hidden_field :${1:attribute}",
+        "description": "form_for hidden_field"
+    },   
+    "form-for-file-field": {
+		"prefix": "form-for-file-field",
+		"body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.file_field :${2:attribute} %>\r\n  ",
+		"description": "ERB file field"
+    },
+    "form-for-password-field": {
+		"prefix": "form-for-password-field",
+		"body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.password_field :${2:attribute} %>\r\n",
+		"description": "form_for password_field"
+    },
+    "form-for-text-area": {
+		"prefix": "form-for-text-area",
+		"body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.text_area :${2:attribute} %>\r\n",
+		"description": "ERB text area"
+	},
+	"form-for-text-field": {
+		"prefix": "form-for-text-field",
+		"body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.text_field :${2:attribute} %>\r\n",
+		"description": "ERB text field"
+    },
+    "form-for-check-box": {
+		"prefix": "form-for-check-box",
+		"body": "<%= ${1:f}.label :${2:attribute} %><br />\r\n<%= ${1:f}.check_box :${2:attribute} %>\r\n",
+		"description": "ERB check box"
+    },
+    "form-for-submit": {
+        "prefix": "form-for-sbumit",
+        "body": "f.submit \"${1:Submit}\"${2:, disable_with: '${3:$1ing...}'}",
+        "description": "form_for submit"
+    },
+    "f.text-field": {
+        "prefix": "f.text_field",
+        "body": "f.text_field :${1:attribute}",
+        "description": "f.text_field (fftf)"
+    },
+    "f.passowrd-field": {
+        "prefix": "f.password",
+        "body": "f.password_field :${1:attribute}",
+        "description": "f.password_field"
+    },
+    "f.radio-box": {
+        "prefix": "f.radio-box",
+        "body": "f.radio_box :${1:attribute}, :${2:tag_value}",
+        "description": "f.radio_box"
+    },
+    "f.text-area": {
+        "prefix": "f.text-area",
+        "body": "f.text_area :${1:attribute}",
+        "description": "f.text_area (ffta)"
+    },
+    "f.hidden-field": {
+        "prefix": "f.hidden-field",
+        "body": "f.hidden_field :${1:attribute}",
+        "description": "f.hidden_field (ffhf)"
+    },
+    "f.file-field": {
+        "prefix": "f.file-field",
+        "body": "f.file_field :${1:attribute}",
+        "description": "f.file_field (ffff)"
+    },
+    "f.check-box": {
+		"prefix": "f.check-box",
+		"body": "f.check_box :${1:attribute}",
+		"description": "f.check_box (ffcb)"
+    },
+    "f.label": {
+        "prefix": "f.label",
+        "body": "f.label :${1:attribute}${2:, \"${3:${1/[[:alpha:]]+|(_)/(?1: :\\u$0)/g}}\"}",
+        "description": "f.label"
+    },
+    "f.submit": {
+        "prefix": "f.submit",
+        "body": "f.submit \"${1:Submit}\"${2:, disable_with: '${3:$1ing...}'}",
+        "description": "f.submit"
+    }
+
+}

@@ -1,0 +1,47 @@
+{
+	"redirect-to": {
+		"prefix": "redirect-to",
+		"body": "redirect_to ${1:Something}_path",
+		"description": "redirect_to path"
+	},
+    "redirect-to-action": {
+		"prefix": "redirect-to-action",
+		"body": "redirect_to action: \"${1:index}\"",
+		"description": "redirect_to (action)"
+	},
+	"redirect-to-action-id": {
+		"prefix": "redirect-to-action-id",
+		"body": "redirect_to action: \"${1:show}\", id: ${0:@item}",
+		"description": "redirect_to (action, id)"
+	},
+	"redirect-to-controller": {
+		"prefix": "redirect-to-controller",
+		"body": "redirect_to controller: \"${1:items}\", action: \"${2:list}\"",
+		"description": "redirect_to (controller, action)"
+	},
+	"redirect-to-controller-action-id": {
+		"prefix": "redirect-to-controller-action-id",
+		"body": "redirect_to controller: \"${1:items}\", action: \"${2:show}\", id: ${0:@item}",
+		"description": "redirect_to (controller, action, id)"
+	},
+	"redirect-to-nested-path": {
+		"prefix": "redirect-to-nested-path",
+		"body": "redirect_to(${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})})",
+		"description": "redirect_to (nested path)"
+	},
+	"redirect-to-nested-path-plural": {
+		"prefix": "redirect-to-nested-path-plural",
+		"body": "redirect_to(${2:${10:parent}_${11:child}_path(${12:@}${13:${10}})})",
+		"description": "redirect_to (nested path plural)"
+	},
+	"redirect-to-path": {
+		"prefix": "redirect-to-path",
+		"body": "redirect_to(${2:${12:model}_path(${13:@}${14:${12}})})",
+		"description": "redirect_to (path)"
+	},
+	"redirect-to-path-plural": {
+		"prefix": "redirect-to-path-plural",
+		"body": "redirect_to(${2:${10:model}s_path})",
+		"description": "redirect_to (path plural)"
+	}
+}

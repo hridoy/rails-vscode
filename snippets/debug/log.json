@@ -1,0 +1,32 @@
+{
+    "logd": {
+		"prefix": "logger-debug",
+		"body": "logger.debug { \"${1:message}\" }$0",
+		"description": "logger.debug"
+	},
+	"loge": {
+		"prefix": "logger-error",
+		"body": "logger.error { \"${1:message}\" }$0",
+		"description": "logger.error"
+	},
+	"logf": {
+		"prefix": "logger-fatal",
+		"body": "logger.fatal { \"${1:message}\" }$0",
+		"description": "logger.fatal"
+	},
+	"logi": {
+		"prefix": "logger-info",
+		"body": "logger.info { \"${1:message}\" }$0",
+		"description": "logger.info"
+	},
+	"logw": {
+		"prefix": "logger-warn",
+		"body": "logger.warn { \"${1:message}\" }$0",
+		"description": "logger.warn"
+	},
+	"rdb": {
+		"prefix": "raild-default-logger",
+		"body": "RAILS_DEFAULT_LOGGER.debug \"${1:message}\"$0",
+		"description": "RAILS_DEFAULT_LOGGER.debug"
+	}
+}

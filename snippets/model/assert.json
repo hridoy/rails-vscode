@@ -1,0 +1,63 @@
+{
+    "assert": {
+		"prefix": "assert",
+		"body": "assert(${1:var} = assigns(:${1}), \"Cannot find @${1}\")\r\n$0",
+		"description": "assert(var = assigns(:var))"
+	},
+	"assert-select": {
+		"prefix": "assert-select",
+		"body": "assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}${6: do\r\n\t$0\r\nend}",
+		"description": "assert_select"
+	},
+	"assert-difference": {
+		"prefix": "assert-difference",
+		"body": "assert_difference \"${1:Model}.${2:count}\", ${3:1} do\r\n  $0\r\nend",
+		"description": "assert_difference"
+	},
+	"assert-no-difference": {
+		"prefix": "assert-no-difference",
+		"body": "assert_no_difference \"${1:Model}.${2:count}\" do\r\n  $0\r\nend",
+		"description": "assert_no_difference"
+	},
+	"assert-redirected-to": {
+		"prefix": "assert-redirected-to",
+		"body": "assert_redirected_to ${2:action: \"${1:index}\"}",
+		"description": "assert_redirected_to"
+	},
+	"assert-redirected-to-path": {
+		"prefix": "assert-redirected-to-path",
+		"body": "assert_redirected_to ${1:model}_path",
+		"description": "assert_redirected_to (path)"
+	},
+	"assert-redirected-to-nested-path": {
+		"prefix": "assert-redirected-to-nested-path",
+		"body": "assert_redirected_to ${1:${2:parent}_${3:child}_path(${4:${2}}, ${5:${3}})}",
+		"description": "assert_redirected_to (nested path)"
+	},
+	"assert_response":{
+		"prefix":"assert-response",
+		"body":"assert_response :${1:type}",
+		"description":"assert_response(type, message = nil)"
+	},
+	":sucess":{
+		"prefix":":success",
+		"body":":success",
+		"description":"Asserts response status code was in the 200-299 range"
+	},
+	":redirect":{
+		"prefix":":redirect",
+		"body":":redirect",
+		"description":"Asserts response status code was in the 300-399 range"
+	},
+	":missing":{
+		"prefix":":missing",
+		"body":":missing",
+		"description":"Asserts response status code was 404"
+	},
+	":error":{
+		"prefix":":error",
+		"body":":error",
+		"description":"Asserts response status code was 500-599 range"
+	}
+
+}

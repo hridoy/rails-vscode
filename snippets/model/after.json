@@ -1,0 +1,37 @@
+{
+    "after-create": {
+		"prefix": "after-create",
+		"body": "after_create :${1:method}",
+		"description": "after_create"
+	},
+	"after-save": {
+		"prefix": "after-save",
+		"body": "after_save :${1:method}",
+		"description": "after_save"
+	},
+	"after-update": {
+		"prefix": "after-update",
+		"body": "after_update ",
+		"description": "after_update"
+	},
+	"after-destroy": {
+		"prefix": "after-destroy",
+		"body": "after_destroy ",
+		"description": "after_destroy"
+	},
+	"after-validation": {
+		"prefix": "after-validation",
+		"body": "after_validation :${1:method}",
+		"description": "after_validation callback"
+	},
+	"after-validation-on-create": {
+		"prefix": "after-validation-on-create",
+		"body": "after_validation ${1:validation_method}, on: :create",
+		"description": "after_validation on create"
+	},
+	"after-validation-on-Update": {
+		"prefix": "after-validation-on-update",
+		"body": "after_validation ${1:validation_method}, on: :update",
+		"description": "after_validation on update"
+	}
+}

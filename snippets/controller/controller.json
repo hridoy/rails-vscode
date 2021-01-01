@@ -1,0 +1,42 @@
+{
+	"controller": {
+		"prefix": "controller",
+		"body": "class ${1:Something}Controller < ApplicationController\r\n\t$2\r\nend\r\n",
+		"description": "Rails Controller"
+	},
+	"controller-resetful": {
+		"prefix": "controller-rest",
+		"body": "class ${1:User}sController < ApplicationController\r\n\tbefore_action :find_${2:user}, except: [:index, :new, :create]\r\n\r\n\tdef index\r\n\t\t@${2:user}s = ${1:User}.all\r\n\tend\r\n\r\n\tdef show\r\n\tend\r\n\r\n\tdef new\r\n\t\t@${2:user} = ${1:User}.new\r\n\tend\r\n\r\n\tdef edit\r\n\tend\r\n\r\n\tdef create\r\n\t\t@${2:user} = ${1:User}.new(params[:${2:user}])\r\n\t\tif @${2:user}.save\r\n\t\t  flash[:success] = \"${1:User} successfully created\"\r\n\t\t  redirect_to @${2:user}\r\n\t\telse\r\n\t\t  flash[:error] = \"Something went wrong\"\r\n\t\t  render 'new'\r\n\t\tend\r\n\tend\r\n\r\n\tdef update\r\n\t\tif @${2:user}.update_attributes(params[:${2:user}])\r\n\t\t  flash[:success] = \"${1:User} was successfully updated\"\r\n\t\t  redirect_to @${2:user}\r\n\t\telse\r\n\t\t  flash[:error] = \"Something went wrong\"\r\n\t\t  render 'edit'\r\n\t\tend\r\n\tend\r\n\r\n\tdef destroy\r\n\t\tif @${2:user}.destroy\r\n\t\t\tflash[:success] = \"${1:User} was successfully deleted\"\r\n\t\t\tredirect_to @${2:user}s_path\r\n\t\telse\r\n\t\t\tflash[:error] = \"Something went wrong\"\r\n\t\t\tredirect_to @${2:user}s_path\r\n\t\tend\r\n\tend\r\n\r\n\tprivate\r\n\r\n\t\tdef find_${2:user}\r\n\t\t\t@${2:user} = ${1:User}.find(params[:id])\r\n\t\tend\r\n\r\nend\r\n",
+		"description": "Rails Restful Controller"
+	},
+	"param-hash": {
+		"prefix": "param-hash",
+		"body": "\r\nparams[:${1:id}]$0\r\n",
+		"description": "Rails Params Hash"
+	},
+	"find_id": {
+		"prefix": "find-id",
+		"body": "find(${1:id})",
+		"description": "find(id)"
+	},
+	"find_params": {
+		"prefix": "find-params",
+		"body": "find(params[:${1:id}])",
+		"description": "find(params[:id])"
+	},
+	"respond-to": {
+		"prefix": "respond-to",
+		"body": "respond_to do |format|\r\n\tformat.${1:html}${2: { $0 \\}}\r\nend",
+		"description": "respond_to"
+	},
+	"returning": {
+		"prefix": "returning",
+		"body": "returning ${1:variable} do${2/(^(?<var>\\s*[a-z_][a-zA-Z0-9_]*\\s*)(,\\g<var>)*,?\\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\\s*[a-z_][a-zA-Z0-9_]*\\s*)(,\\g<var>)*,?\\s*$)|.*/(?1:|)/}\r\n\t$0\r\nend",
+		"description": "returning do |variable| … end"
+	},
+	"require-file": {
+		"prefix": "require-file",
+		"body": "require File.dirname(__FILE__) + '/../test_helper'\r\n\r\nclass ${1:Model}ControllerTest < ActionController::TestCase\r\n\tdeft$0\r\nend\r\n",
+		"description": "Create functional test class"
+	}
+}

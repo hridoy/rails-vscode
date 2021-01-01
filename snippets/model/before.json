@@ -1,0 +1,42 @@
+{
+	"before-action": {
+		"prefix": "before-action",
+		"body": "before_action :${1:method}",
+		"description": "before_action"
+	},
+    "before-create": {
+		"prefix": "before-create",
+		"body": "before_create :${1:method}",
+		"description": "before_create"
+	},
+	"before-save": {
+		"prefix": "before-save",
+		"body": "before_save :${1:method}",
+		"description": "before_save"
+	},
+	"before-validation": {
+		"prefix": "before-validation",
+		"body": "before_validation :${1:method}",
+		"description": "before_validation"
+	},
+	"before-destroy": {
+		"prefix": "before-destroy",
+		"body": "before_destroy ",
+		"description": "before_destroy"
+	},
+	"before-update": {
+		"prefix": "before-update",
+		"body": "before_update ",
+		"description": "before_update"
+	},
+	"before-validation-on-create": {
+		"prefix": "before-validation-on-create",
+		"body": "before_validation ${1:validation_method}, on: :create",
+		"description": "before_validation on create"
+	},
+	"before-validation-on-update": {
+		"prefix": "before-validation-on-update",
+		"body": "before_validation ${1:validation_method}, on: :update",
+		"description": "before_validation on update"
+	}
+}

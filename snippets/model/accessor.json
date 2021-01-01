@@ -1,0 +1,13 @@
+{
+    "cattr-accessor": {
+		"prefix": "cattr-accessor",
+		"body": "cattr_accessor :${0:attr_names}",
+		"description": "cattr_accessor"
+	},
+
+	"mattr-accessor": {
+		"prefix": "mattr-accessor",
+		"body": "mattr_accessor :${0:attr_names}",
+		"description": "mattr_accessor"
+	}
+}

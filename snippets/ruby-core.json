@@ -1,0 +1,52 @@
+{
+	"attr-accessor": {
+		"prefix": "attr-accessor",
+		"body": "attr_accessor :${1:attribute_name}",
+		"description": "attr_accessor"
+	},
+	"attr-reader": {
+		"prefix": "attr-reader",
+		"body": "attr_reader :${1:attribute_name}",
+		"description": "attr_reader"
+	},
+	"attr-writer": {
+		"prefix": "attr-writer",
+		"body": "attr_writer :${1:attribute_name}",
+		"description": "attr_writer"
+	},
+	"case": {
+		"prefix": "case",
+		"body": "case $1\r\nwhen $2\r\n\t$3\r\nwhen $4\r\n\t$5\r\nelse\r\n\t$6\r\nend",
+		"description": "Ruby case"
+	},
+	"def": {
+		"prefix": "def",
+		"body": "def ${1:method_name}\r\n\t$2\r\nend\r\n",
+		"description": "Ruby/Rails Method"
+	},
+	"each": {
+		"prefix": "each",
+		"body": "\r\n${1:@plural}.each do |${2:single}|\r\n\t$0\r\nend\r\n",
+		"description": "Ruby each"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "if ${1:condition}\r\n\t$2\r\nend\r\n",
+		"description": "Ruby if"
+	},
+	"if-else": {
+		"prefix": "if-else",
+		"body": "\r\nif ${1:condition}\r\n\t$2\r\nelse\r\n\t$3\r\nend\r\n",
+		"description": "Ruby ifelse"
+	},
+	"els-if": {
+		"prefix": "els-if",
+		"body": "elsif ${1:true}",
+		"description": "Ruby elsif"
+	},
+	"if-unless-inline": {
+		"prefix": "if-unless-inline",
+		"body": "${1:do_something} ${2:type_if_or_unless} ${3:condition}",
+		"description": "Ruby if unless inline"
+	}
+}

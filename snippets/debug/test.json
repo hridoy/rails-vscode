@@ -1,0 +1,12 @@
+{
+    "def-test-should-get": {
+		"prefix": "def-test-should-get",
+		"body": "def test_should_get_${1:action}\r\n\t${2:@${3:model} = ${4:$3s}(:${5:fixture_name})\r\n\t}get :${1}${6:, id: @$3.to_param}\r\n\tassert_response :success\r\n\t$0\r\nend",
+		"description": "def test_should_get_action"
+	},
+	"def-test-should-post": {
+		"prefix": "def-test-should-post",
+		"body": "def test_should_post_${1:action}\r\n\t${3:@$2 = ${4:$2s}(:${5:fixture_name})\r\n\t}post :${1}${6:, id: @$2.to_param}, ${2:model}: { $0 }\r\n\tassert_response :redirect\r\n\r\nend",
+		"description": "def test_should_post_action"
+    }
+}

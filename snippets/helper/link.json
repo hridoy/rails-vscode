@@ -1,0 +1,57 @@
+{
+	"link_to": {
+		"prefix": "link-to",
+		"body": "<%= link_to ${1:\"${2:Some Page}\"}, ${3:some}_path %>",
+		"description": "ERB link_to"
+	},
+    "link_to_action": {
+		"prefix": "link-to-action",
+		"body": "link_to \"${1:link text...}\", action: \"${2:index}\"",
+		"description": "link_to (action)"
+	},
+	"link_to_action_id": {
+		"prefix": "link-to-action-id",
+		"body": "link_to \"${1:link text...}\", action: \"${2:edit}\", id: ${3:@item}",
+		"description": "link_to (action, id)"
+	},
+	"link_to_controller": {
+		"prefix": "link-to-controller",
+		"body": "link_to \"${1:link text...}\", controller: \"${2:items}\"",
+		"description": "link_to (controller)"
+	},
+	"link_to_controller_action": {
+		"prefix": "link-to-controller-action",
+		"body": "link_to \"${1:link text...}\", controller: \"${2:items}\", action: \"${3:index}\"",
+		"description": "link_to (controller, action)"
+	},
+	"link_to_controller_action_id": {
+		"prefix": "link-to-controller-action-id",
+		"body": "link_to \"${1:link text...}\", controller: \"${2:items}\", action: \"${3:edit}\", id: ${4:@item}",
+		"description": "link_to (controller, action, id)"
+	},
+	"link_to_path": {
+		"prefix": "link-to-path",
+		"body": "link_to ${1:\"${2:link text...}\"}, ${3:${12:model}_path(${13:@}${14:${12}})}",
+		"description": "link_to (path)"
+	},
+	"link_to_path_plural": {
+		"prefix": "link-to-path-plural",
+		"body": "link_to ${1:\"${2:link text...}\"}, ${3:${4:model}s_path}",
+		"description": "link_to (path plural)"
+	},
+	"link_to_nested_path": {
+		"prefix": "link-to-nested-path",
+		"body": "link_to ${1:\"${2:link text...}\"}, ${3:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}",
+		"description": "link_to (nested path)"
+	},
+	"link_to_nested_path_plural": {
+		"prefix": "link-to-nested-path-plural",
+		"body": "link_to ${1:\"${2:link text...}\"}, ${3:${10:parent}_${11:child}_path(${12:@}${13:${10}})}",
+		"description": "link_to (nested path plural)"
+	},
+	"link_to_model": {
+		"prefix": "link-to-model",
+		"body": "link_to ${1:model}.${2:name}, ${3:${4:$1}_path(${14:$1})}",
+		"description": "link_to model"
+	}
+}

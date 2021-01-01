@@ -1,0 +1,17 @@
+{
+    "scope": {
+		"prefix": "scope",
+		"body": "scope :${1:name}, -> { where(:${2:attibute} => ${3:value})}\r\n# Ex:- scope :active, -> {where(:active => true)}",
+		"description": "Name scope"
+	},
+	"scope-lambda": {
+		"prefix": "scope-lambda",
+		"body": "scope :${1:name}, lambda { where(:${2:attibute} => ${3:value})}\r\n# Ex:- scope :active, lambda {where(:active => true)}",
+		"description": "Scope with lambda"
+	},
+	"scope-arguments": {
+		"prefix": "scope-arguments",
+		"body": "scope :${1:name}, ->(${2:argument}){ where(${3:attribute:} ${2}) }",
+		"description": "scope with arguments"
+	}
+}

@@ -1,0 +1,47 @@
+{
+    "id":{
+            "prefix":":id",
+            "body":":id => ${false}",
+            "description":"Disable automatically add primary key (forgein key)"
+    }, 
+    "limit":{
+        "prefix":":limit",
+        "body":":limit => ${1:size} #By default SQL String limit 255 character \r\n#Ex:- :limit => 40",
+        "description":"SQL character limit size"
+    },
+    "default":{
+        "prefix":":default",
+        "body":":default => ${1: value}\r\n#Ex:- :default =>''",
+        "description":"Default Value"
+    },
+    "null":{
+        "prefix":":null",
+        "body":":null => ${1: true/false}\r\n#Ex:- :null => false",
+        "description":"Null vale true or false"
+    },
+    "precision":{
+        "prefix":":precision",
+        "body":":precision => ${1: number}",
+        "description":"Precision"
+    },
+    "scale":{
+        "prefix":":scale",
+        "body":":scale => ${1: number}",
+        "description":"Scale"
+    },
+    "unique":{
+        "prefix":":unique",
+        "body":":unique => ${1: true or false}",
+        "description":":unique => true/false"
+    },
+    "name":{
+        "prefix":":name",
+        "body":":name => ${1: your_custom_name}",
+        "description":":name => \"your_custom_name\""
+    },
+    "after":{
+        "prefix":":after",
+        "body":":after => ${1: column_name}",
+        "description":"Add column after particular table"
+    }
+}

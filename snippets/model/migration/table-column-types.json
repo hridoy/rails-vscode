@@ -1,0 +1,52 @@
+{
+    "binary":{
+        "prefix":":binary",
+        "body":"binary",
+        "description":"Binary Column Type"
+    },
+    "boolean":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "date":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "datetime":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "decimal":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "float":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "integer":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "string":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "text":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    },
+    "time":{
+        "prefix":":boolean",
+        "body":"boolean",
+        "description":"Binary Column Type"
+    }
+}

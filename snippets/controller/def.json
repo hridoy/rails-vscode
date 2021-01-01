@@ -1,0 +1,52 @@
+{
+	"crud": {
+		"prefix": "crud",
+		"body": "\r\n  def index\r\n    @${1} = ${1/(.+)/\\u$1/g}.scoped\r\n  end\r\n\r\n  def show\r\n    @${1} = ${1/(.+)/\\u$1/g}.find(params[:id])\r\n  end\r\n\r\n  def create\r\n    @${1} = ${1/(.+)/\\u$1/g}.new(params[:${1}])\r\n  end\r\n\r\n  def update\r\n    @${1} = ${1/(.+)/\\u$1/g}.find(params[:id])\r\n  end\r\n\r\n  def edit\r\n    @${1} = ${1/(.+)/\\u$1/g}.find(params[:id])\r\n  end\r\n\r\n  def destroy\r\n    ${1} = ${1/(.+)/\\u$1/g}.find(params[:id])\r\n  end",
+		"description": "crud actions"
+	},
+    "def-create": {
+		"prefix": "def-create",
+		"body": "def create\r\n\t@${1:object} = ${2:Object}.new(params[:${1:object}])\r\n\tif @${1:object}.save\r\n\t  flash[:success] = \"${2:Object} successfully created\"\r\n\t  redirect_to @${1:object}\r\n\telse\r\n\t  flash[:error] = \"Something went wrong\"\r\n\t  render 'new'\r\n\tend\r\nend\r\n",
+		"description": "Rails Restful Create Action"
+	},
+	"def_create": {
+		"prefix": "def-create-model",
+		"body": "def create\r\n  @${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\\u$0)/g}}.new(params[:$1])\r\n  $0\r\n  respond_to do |format|\r\n    if @$1.save\r\n      flash[:notice] = '$2 was successfully created.'\r\n      format.html { redirect_to(@$1) }\r\n      format.xml { render xml: @$1, status: :created, location: @$1 }\r\n    else\r\n      format.html { render action: \"new\" }\r\n      format.xml { render xml: @$1.errors, status: :unprocessable_entity }\r\n    end\r\n  end\r\nend\r\n",
+		"description": "def create - resource"
+	},
+	"def-destory": {
+		"prefix": "def-destory",
+		"body": "def destroy\r\n\t@${1:object} = ${2:Object}.find(${3:params[:id]})\r\n\tif @${1:object}.destroy\r\n\t\tflash[:success] = '${2:Object} was successfully deleted.'\r\n\t\tredirect_to ${1:object}s_url\r\n\telse\r\n\t\tflash[:error] = 'Something went wrong'\r\n\t\tredirect_to ${1:object}s_url\r\n\tend\r\nend\r\n",
+		"description": "Rails Restful Destroy Action"
+	},
+	"def-edit": {
+		"prefix": "def-edit",
+		"body": "def edit\r\n\t@$1 = $2.find($3)\r\nend\r\n",
+		"description": "Rails Restful Edit Action"
+	},
+	"def-index": {
+		"prefix": "def-index",
+		"body": "def index\r\n\t@$1 = $2.all\r\nend\r\n",
+		"description": "Rails Restful Index Action"
+	},
+	"def-new": {
+		"prefix": "def-new",
+		"body": "def new\r\n\t@$1 = $2.new\r\nend\r\n",
+		"description": "Rails Restful New Action"
+	},
+	"def-show": {
+		"prefix": "def-show",
+		"body": "def show\r\n\t@$1 = $2.find($3)\r\nend\r\n",
+		"description": "Rails Restful Show Action"
+	},
+	"def-update": {
+		"prefix": "def-update",
+		"body": "def update\r\n\t@${1:object} = ${2:Object}.find(${3:params[:id]})\r\n    if @${1:object}.update_attributes(params[:${1:object}])\r\n      flash[:success] = \"${2:Object} was successfully updated\"\r\n      redirect_to @${1:object}\r\n    else\r\n      flash[:error] = \"Something went wrong\"\r\n      render 'edit'\r\n    end\r\nend\r\n",
+		"description": "Rails Restful Update Action"
+	},
+	"def-initialize": {
+		"prefix": "def-initialize",
+		"body": "def initialize(${1:attribute})\r\n  @${1} = ${1}\r\nend",
+		"description": "Define initializer method"
+    }
+}

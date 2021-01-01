@@ -1,0 +1,209 @@
+{
+    "name": "rails-vscode",
+    "displayName": "Rails Snippets",
+    "description": "10K+ snippets & daily update",
+    "version": "0.0.1",
+    "icon": "img/rails.png",
+    "galleryBanner": {
+        "color": "#1E81C1",
+        "theme": "light"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [{
+                "language": "ruby",
+                "path": "./snippets/attributes/attributes-rb.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/controller/controller.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/controller/def.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/controller/redirect.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/debug/log.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/debug/rspec.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/debug/test.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/gem/gem.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/helper/form.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/helper/form-bootstrap.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/helper/link.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/helper/routes.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/accessor.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/after.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/assert.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/before.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/belongs.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/has.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/scopes.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/validates.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/xhr.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/new.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/migration/migration.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/migration/table-column-options.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/model/migration/table-column-types.json"
+            },
+            {
+                "language": "erb",
+                "path": "./snippets/template/erb-render.json"
+            },
+            {
+                "language": "erb",
+                "path": "./snippets/template/erb-default.json"
+            },
+            {
+                "language": "ruby",
+                "path": "./snippets/ruby-core.json"
+            }
+        ],
+        "languages": [{
+                "id": "ruby",
+                "aliases": [
+                    "Ruby",
+                    "ruby"
+                ],
+                "extensions": [
+                    ".builder",
+                    ".cgi",
+                    ".fcgi",
+                    ".gemspec",
+                    ".god",
+                    ".irbrc",
+                    ".jbuilder",
+                    ".mspec",
+                    ".pluginspec",
+                    ".podspec",
+                    ".prawn",
+                    ".pryrc",
+                    ".rabl",
+                    ".rake",
+                    ".rb",
+                    ".rbuild",
+                    ".rbw",
+                    ".rbx",
+                    ".rjs",
+                    ".ru",
+                    ".ruby",
+                    ".spec",
+                    ".thor",
+                    ".watchr"
+                ],
+                "filenames": [
+                    "appfile",
+                    "appraisals",
+                    "berksfile",
+                    "brewfile",
+                    "capfile",
+                    "fastfile",
+                    "gemfile",
+                    "guardfile",
+                    "podfile",
+                    "puppetfile",
+                    "rakefile",
+                    "snapfile",
+                    "thorfile",
+                    "vagrantfile",
+                    "dangerfile"
+                ],
+                "configuration": "./configuration/language-configuration-ruby.json"
+            },
+            {
+                "id": "erb",
+                "aliases": [
+                    "erb",
+                    "Encapsulated Ruby"
+                ],
+                "extensions": [
+                    ".erb",
+                    ".rhtml",
+                    ".rhtm"
+                ],
+                "configuration": "./configuration/language-configuration-erb.json"
+            }
+        ],
+        "grammars": [{
+                "language": "ruby",
+                "scopeName": "source.ruby",
+                "path": "./syntaxes/ruby.tmLanguage"
+            },
+            {
+                "language": "erb",
+                "scopeName": "text.html.erb",
+                "path": "./syntaxes/erb.tmLanguage"
+            }
+        ]
+    }
+}

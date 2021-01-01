@@ -1,0 +1,138 @@
+{
+	"def-change":{
+		"prefix":"def-change",
+		"body":"def change \n\tcreate_table :${1:table_name} do |t|\r\n\t  t.${2:column_type} :${3:column_name}\r\n\r\n\t  t.timestamps\r\n\tend\r\nend",
+		"description":"def change"
+	},
+	"def-up":{
+		"prefix":"def-up",
+		"body":"def up \n\tcreate_table :${1:table_name} do |t|\r\n\t  t.${2:column_type} :${3:column_name}\r\n\r\n\t  t.timestamps\r\n\tend\r\nend",
+		"description":"def up"
+	},
+	"def-down":{
+		"prefix":"def-down",
+		"body":"def down \n\tdrop_table :${1:table_name}\r\nend",
+		"description":"def down"
+	},
+	"create-table": {
+		"prefix": "create-table",
+		"body": "create_table :${1:table_name} do |t|\r\n  t.${2:column_type} :${3:column_name}\r\n\r\n  t.timestamps\r\nend\r\n",
+		"description": "Create Table"
+	},
+	"drop-table": {
+		"prefix": "drop-table",
+		"body": "drop_table :${1:table_name}",
+		"description": "Drop Table"
+	},
+	"rename-table": {
+		"prefix": "rename-table",
+		"body": "rename_table (\"${1:old_table_name}\", \"${2:new_table_name}\")",
+		"description": "Rename Table"
+	},	
+	"add-column": {
+		"prefix": "add-comun",
+		"body": "add_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\r\n#Ex:- add_column(\"admin_users\", \"username\", :string, :limit =>25, :after => \"email\")",
+		"description": "Add Column"
+	},
+	"remove-column": {
+		"prefix": "remove-column",
+		"body": "remove_column :${1:table_name}, :${2:column_name}",
+		"description": "Remove Column"
+	},
+	"change-column": {
+		"prefix": "change-column",
+		"body": "change_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}\r\n#Ex:- change_column(\"admin_users\", \"email\", :string, :limit =>25)",
+		"description": "Change Column"
+	},
+	"rename-column": {
+		"prefix": "rename-column",
+		"body": "rename_column :${1:table_name}, :${2:old_column_name}, :${3:new_column_name}\r\n#Ex:- rename_column(\"admin_users\", \"pasword\",\"hashed_pasword\")",
+		"description": "Rename Column"
+	},
+	"add-index": {
+		"prefix": "add-index",
+		"body": "add_index :${1:table_name}, :${2:column_name}${4:, ${5:options}: \"${6:custom_index_name}\"}\r\n#Ex:- add_index(\"admin_users\", \"username\")",
+		"description": "Add Index"
+	},
+	"remove-index": {
+		"prefix": "remove-index",
+		"body": "remove_index :${1:table_name}, name: :${2:index_name}",
+		"description": "Remove Index"
+	},
+	"t.column": {
+		"prefix": "t.column",
+		"body": "t.column ${1:column_name}, :${2:column_type}\r\n# Example: t.column \"first_name\", :string",
+		"description": "Create Column in Table"
+	},
+	"t.binary": {
+		"prefix": "t.binary",
+		"body": "t.binary :${1:title}${2:, limit: ${3:2}.megabytes}",
+		"description": "t.binary"
+	},
+	"t.boolean": {
+		"prefix": "t.boolean",
+		"body": "t.boolean :${1:title}\r\n",
+		"description": "t.boolean"
+	},
+	"t.time": {
+		"prefix": "t.time",
+		"body": "t.time :${1:title}\r\n",
+		"description": "t.time"
+	},
+	"t.date": {
+		"prefix": "t.date",
+		"body": "t.date :${1:title}\r\n",
+		"description": "t.date"
+	},
+	"t.datetime": {
+		"prefix": "t.datetime",
+		"body": "t.datetime ${\"created_at\"}\r\n${\"updated_at\"}",
+		"description": "t.datetime"
+	},
+	"t.timestamps": {
+		"prefix": "t.timestamps",
+		"body": "t.timestamps",
+		"description": "Created_at and updated_at in one single comand"
+	},
+	"t.decimal": {
+		"prefix": "t.decimal",
+		"body": "t.decimal :${1:title}${2:${3:, precision: ${4:10}}${5:, scale: ${6:2}}}",
+		"description": "t.decimal"
+	},
+	"t.float": {
+		"prefix": "t.float",
+		"body": "t.float :${1:title}",
+		"description": "t.float"
+	},
+	"t.integer": {
+		"prefix": "t.integer",
+		"body": "t.integer :${1:title}",
+		"description": "t.integer"
+	},
+	"t.integer-lock": {
+		"prefix": "t.integer-lock",
+		"body": "t.integer :lock_version, null: false, default: 0",
+		"description": "t.lock_version (tcl)"
+	},
+	"t.references": {
+		"prefix": "t.references",
+		"body": "t.references :${1:taggable}${2:, polymorphic: ${3:{ default: '${4:Photo}' \\}}}",
+		"description": "t.references (tcr)"
+	},
+	"t.rename": {
+		"prefix": "t.rename",
+		"body": "t.rename(:${1:old_column_name}, :${2:new_column_name})",
+		"description": "Table column(s) rename"
+	},
+	"t.string": {
+		"prefix": "t.string",
+		"body": "t.string :${1:title}",
+		"description": "t.string (tcs)"
+	},
+	"t.text": {
+		"prefix": "t.text",
+		"body": "t.text :${1:title}",
+		"description": "t.text (tct)"
+	}
+
+}

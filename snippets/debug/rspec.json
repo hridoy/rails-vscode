@@ -1,0 +1,137 @@
+{
+	"bb": {
+		"prefix": "before-block",
+		"body": "before do\r\n\t$1\r\nend\r\n",
+		"description": "RSpec Before Block"
+	},
+	"bi": {
+		"prefix": "before-inline",
+		"body": "before { $1 } ",
+		"description": "RSpec Before Inline"
+	},
+	"fiw": {
+		"prefix": "fill-in",
+		"body": "fill_in \"${1:Field}\",\twith: \"${2:sometext}\" ",
+		"description": "RSpec Capybara fill_in with"
+	},
+	"cont": {
+		"prefix": "context",
+		"body": "context \"${1:a context}\" do\r\n\t$2\r\nend\r\n",
+		"description": "RSpec Context Block"
+	},
+	"dci": {
+		"prefix": "describe-context-it",
+		"body": "describe \"${1:something to be performed}\" do\r\n  context \"${2:under condition}\" do\r\n    it \"${3:behaves like}\" do\r\n      $4\r\n    end\r\n  end\r\nend\r\n",
+		"description": "RSpec Describe + Context + It Block"
+	},
+	"desc": {
+		"prefix": "describe",
+		"body": "describe \"${1:a specification}\" do\r\n\t$2\r\nend\r\n",
+		"description": "RSpec Describe Block"
+	},
+	"exp": {
+		"prefix": "expect",
+		"body": "expect(${1:subject}).to $2 ",
+		"description": "RSpec Expect"
+	},
+	"ie": {
+		"prefix": "it-expect-inline",
+		"body": "it { expect { $1 }.to $2 } ",
+		"description": "RSpec It Expect Inline"
+	},
+	"iec": {
+		"prefix": "it-expect",
+		"body": "it { expect { $1 }.to change($2, $3) } ",
+		"description": "RSpec It Expect Change Inline"
+	},
+	"ii": {
+		"prefix": "it-line",
+		"body": "it { $1 } ",
+		"description": "RSpec It-Inline"
+	},
+	"itb": {
+		"prefix": "it-block",
+		"body": "it \"${1:description}\" do\r\n\t$2\r\nend\r\n",
+		"description": "RSpec It Block"
+	},
+	"let": {
+		"prefix": "let",
+		"body": "let(:${1:var}) { $2 } ",
+		"description": "RSpec Let"
+	},
+	"pen": {
+		"prefix": "pending",
+		"body": "pending \"${1:a specification}\" do\r\n\t$2\r\nend\r\n",
+		"description": "RSpec Pending Block"
+	},
+	"shb": {
+		"prefix": "should-have-button",
+		"body": "it { ${1:should} have_button('${2:Button Text}') } ",
+		"description": "RSpec Should Have Button"
+	},
+	"shf": {
+		"prefix": "should-have-filed",
+		"body": "it { ${1:should} have_field('${2:selector}') } ",
+		"description": "RSpec Should Have Field"
+	},
+	"shl": {
+		"prefix": "should-have-link",
+		"body": "it { ${1:should} have_link('${2:Link Text}') } ",
+		"description": "RSpec Should Have Link"
+	},
+	"av": {
+		"prefix": "allow-value",
+		"body": "it { ${1:should} allow_value(\"${2:somevalue}\").for(:${3:someattr}) } ",
+		"description": "RSpec \"shoulda\" allow_value"
+	},
+	"bt": {
+		"prefix": "belong-to",
+		"body": "it { ${1:should} belong_to(:${2:object}) } ",
+		"description": "RSpec \"shoulda\" belong_to"
+	},
+	"elo": {
+		"prefix": "ensure-length-of",
+		"body": " it { ${1:should} ensure_length_of(:${2:attribute}).${3:is_at_most}(${4:50}) }",
+		"description": "RSpec \"shoulda\" ensure_length_of"
+	},
+	"hm": {
+		"prefix": "have-many",
+		"body": "it { ${1:should} have_many(:${2:objects}) } ",
+		"description": "RSpec \"shoulda\" have_many"
+	},
+	"hmt": {
+		"prefix": "have-many-through",
+		"body": "it { ${1:should} have_many(:$2).through(:$3) } ",
+		"description": "RSpec \"shoulda\" have_many_through"
+	},
+	"vpo": {
+		"prefix": "validate-presense-of",
+		"body": "it { ${1:should} validate_presence_of(:${2:attribute}) }",
+		"description": "RSpec \"shoulda\" validate_presence_of"
+	},
+	"vuo": {
+		"prefix": "validate-uniqueness-of",
+		"body": "it { ${1:should} validate_uniqueness_of(:${2:attribute}) }",
+		"description": "RSpec \"shoulda\" validate_uniqueness_of"
+	},
+	"shs": {
+		"prefix": "should-have-selector",
+		"body": "it { ${1:should} have_selector('${2:selector}'${3:, text: 'text'}) } ",
+		"description": "RSpec Should Have Selector"
+	},
+	"srt": {
+		"prefix": "should-respond-to",
+		"body": "it { ${1:should} respond_to(:${2:method}) } ",
+		"description": "RSpec Should Respond To"
+	},
+	"sub": {
+		"prefix": "subject",
+		"body": "subject { ${1:page} } ",
+		"description": "RSpec Subject"
+	},
+	"subl": {
+		"prefix": "subject-let",
+		"body": "subject(:${1:var}) { $2 } ",
+		"description": "RSpec Subject-Let"
+	}
+}

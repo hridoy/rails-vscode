@@ -1,0 +1,22 @@
+{
+    "gem-development": {
+		"prefix": "gem-development",
+		"body": "group :${4:development},${2: do}\r\n\tgem '${1:name}' 'version'\r\n\t$3\r\nend\r\n",
+		"description": "Develpment Gem"
+	},
+	"gem-test": {
+		"prefix": "gem-test",
+		"body": "group :${4:test},${2: do}\r\n\tgem '${1:name}' 'version'\r\n\t$3\r\nend\r\n",
+		"description": "Test Gem"
+	},
+	"gem-production": {
+		"prefix": "gem-production",
+		"body": "group :${4:production},${2: do}\r\n\tgem '${1:name}' 'version'\r\n\t$3\r\nend\r\n",
+		"description": "Production Gem"
+	},
+	"gem-development-test": {
+		"prefix": "gem-development-test",
+		"body": "group :${4::development},${2: test do}\r\n\tgem '${1:name}' 'version'\r\n\t$3\r\nend\r\n",
+		"description": "Develpment & Test Gem"
+	}
+}

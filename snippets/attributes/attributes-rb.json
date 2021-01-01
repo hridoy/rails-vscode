@@ -1,0 +1,58 @@
+{
+	"presence": {
+		"prefix": "presence",
+		"body": "presence :${1:true}",
+		"description": "presence"
+	},
+	"length": {
+		"prefix": "length",
+		"body": "length: {${2:minimum:}${1:3}, ${3:maximum:}${1:}}",
+		"description": "length"
+	},
+	"method": {
+		"prefix": "method",
+		"body": "method: :${1:name}",
+		"description": "length"
+	},
+	"delete": {
+		"prefix": "delete",
+		"body": "${1::delete}",
+		"description": "delete"
+	},
+	"data": {
+		"prefix": "data",
+		"body": "data: ${1:{ confirm: 'Are you sure?' }}",
+		"description": "method"
+	},
+	"only": {
+		"prefix": "only",
+		"body": "only: ${1:[:edit, :update, :show, :destory]}",
+		"description": "method"
+	},
+	"edit": {
+		"prefix": "edit",
+		"body": ":${1:edit,}",
+		"description": "edit"
+	},
+	"update": {
+		"prefix": "update",
+		"body": ":${1:update,}",
+		"description": "update"
+	},
+	"show": {
+		"prefix": "show",
+		"body": ":${1:show,}",
+		"description": "show"
+	},
+	"destroy": {
+		"prefix": "destroy",
+		"body": ":${1:destroy}",
+		"description": "destroy"
+	},
+	"format": {
+		"prefix": "format",
+		"body": "format: ${1:{ with: format_name }}",
+		"description": "format"
+	}
+
+}

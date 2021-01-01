@@ -1,0 +1,33 @@
+{
+    "helper-method": {
+        "prefix": "helper-method",
+        "body": "helper_method :${1:method_name}",
+        "description": "Helper method"
+    },
+    "email-downcase": {
+        "prefix": "email-downcase",
+        "body": "before_save {self.email = email.downcase}",
+        "description": "before_save {self.email = email.downcase}"
+    },
+    "active-record-model": {
+        "prefix": "active-record-model",
+        "body": "class ${1:User} < ActiveRecord::Base\r\n\r\n\t$2\r\n\r\n\tprivate\r\n\t\t$3\r\nend\r\n",
+        "description": "Rails Active Record Model"
+    },
+    "binding": {
+        "prefix": "binding",
+        "body": "\r\nbinding.pry\r\n",
+        "description": ""
+    },
+    "verify": {
+        "prefix": "verify",
+        "body": "verify only: [:$1], method: :post, render: { status: 500, text: \"use HTTP-POST\" }\r\n",
+        "description": "verify — render"
+    },
+    "accepts-nested-attributes-for": {
+		"prefix": "accepts nested attributes for",
+		"body": "accepts_nested_attributes_for :${1:relationship}, ${2:reject_if: ->(attributes){ attributes['name'].blank? \\}}${3:, allow_destroy: true}",
+		"description": "accepts_nested_attributes_for"
+	}
+    
+}

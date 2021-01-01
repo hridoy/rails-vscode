@@ -1,0 +1,87 @@
+{
+	"for-loop": {
+		"prefix": "for-loop",
+		"body": "<% if !${1:list}.blank? %>\r\n  <% for ${2:item} in ${1} %>\r\n    $3\r\n  <% end %>\r\n<% else %>\r\n",
+		"description": "ERB For loop"
+	},
+	"each": {
+		"prefix": "each",
+		"body": "\r\n<% ${1:@plural}.each do |${2:single}| %>\r\n\t$0\r\n<% end %>\r\n",
+		"description": "ERB each"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "\r\n<% if ${1:condition} %>\r\n\t$2\r\n<% end %>\r\n",
+		"description": "ERB if"
+	},
+	"if-else": {
+		"prefix": "if-else",
+		"body": "\r\n<% if ${1:condition} %>\r\n\t$2\r\n\t<% else %>\r\n\t$3\r\n<% end %>\r\n",
+		"description": "ERB if else"
+	},
+	"if-unless-inline": {
+		"prefix": "if-unless-inline",
+		"body": "<%= ${1:do_something} ${2:type_if_or_unless} ${3:condition} %>",
+		"description": "ERB if unless inline"
+	},
+	"else": {
+		"prefix": "else",
+		"body": "<% else %>",
+		"description": "ERB else"
+	},
+	"else-if": {
+		"prefix": "else-if",
+		"body": "<% elsif ${1:true} %>",
+		"description": "ERB elsif"
+	},
+	"end": {
+		"prefix": "end",
+		"body": "\r\n<% end %>\r\n",
+		"description": "ERB end"
+	},
+	"emded": {
+		"prefix": "emded",
+		"body": "<% $0 %>",
+		"description": "embed ruby ERB"
+	},
+	"emded-print": {
+		"prefix": "emded-print",
+		"body": "<%= $0 %>",
+		"description": "output embedding tag"
+	},
+	"collection-select": {
+		"prefix": "collection-select",
+		"body": "<%= collection_select(:${1:user}, :${2:id}, ${3:@users}, :${4:id}, :${5:name}) %>",
+		"description": "ERB collection select"
+	},
+	"flash": {
+		"prefix": "flash",
+		"body": "flash[:${1:notice}] = \"${2:Successfully created...}\"$0",
+		"description": "flash[…]"
+	},
+	"format": {
+		"prefix": "format",
+		"body": "format.${1:js|xml|html}${2: { $0 \\}}",
+		"description": "format.format"
+    },
+    "map": {
+		"prefix": "map",
+		"body": "map(&:${1:id})",
+		"description": "map(&:sym_proc)"
+    },
+    "$label": {
+		"prefix": "$label",
+		"body": "$LABEL",
+		"description": "$LABEL"
+	},
+	"bye-bug": {
+		"prefix": "bye-bug",
+		"body": "\r\nbyebug\r\n",
+		"description": "buy bug"
+    },
+	"buy-bug-erb": {
+		"prefix": "buy-bug-erb",
+		"body": "<%= debug(params) if Rails.env.development? %>",
+		"description": "$LABEL"
+	}
+}
