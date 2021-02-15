@@ -1,7 +1,7 @@
 # Rails Snippets
 **Now updated for latest rails version**
 
-This extension for Visual Studio Code adds snippets for Ruby on rails. More
+This extension for Visual Studio Code adds snippets for Ruby on Rails. More
 Snippets will be becoming soon.
 ## Upcoming:
 - Handle Bar Template
@@ -17,7 +17,7 @@ Snippets will be becoming soon.
 ![Use Extension](https://github.com/hridoy/media/raw/master/rails-preview.gif)
 
 See the [CHANGELOG](https://github.com/hridoy/rails-vscode/master/CHANGELOG.md)
-for the latest changes
+for the latest changes.
 
 # Usage
 Type the helper name and replace **"_"** with **"-"**
@@ -178,7 +178,7 @@ For Example:
 * gem-development-test
 
 # Attributes
-* presense
+* presence
 * length
 * method
 * delete
